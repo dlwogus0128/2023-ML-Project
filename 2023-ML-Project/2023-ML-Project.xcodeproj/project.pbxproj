@@ -56,15 +56,95 @@
 		A392DE972A1C9ADC005D65DF /* 2023-ML-Project */ = {
 			isa = PBXGroup;
 			children = (
-				A392DE982A1C9ADC005D65DF /* AppDelegate.swift */,
-				A392DE9A2A1C9ADC005D65DF /* SceneDelegate.swift */,
+				A392DEAC2A1C9B29005D65DF /* Global */,
+				A392DEAD2A1C9B34005D65DF /* Network */,
+				A392DEAE2A1C9B3D005D65DF /* Presentation */,
 				A392DE9C2A1C9ADC005D65DF /* ViewController.swift */,
 				A392DE9E2A1C9ADC005D65DF /* Main.storyboard */,
 				A392DEA12A1C9ADD005D65DF /* Assets.xcassets */,
-				A392DEA32A1C9ADD005D65DF /* LaunchScreen.storyboard */,
 				A392DEA62A1C9ADD005D65DF /* Info.plist */,
 			);
 			path = "2023-ML-Project";
+			sourceTree = "<group>";
+		};
+		A392DEAC2A1C9B29005D65DF /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				A392DEB52A1C9C75005D65DF /* UIComponents */,
+				A392DEB22A1C9BBA005D65DF /* Literal */,
+				A392DEB32A1C9BFC005D65DF /* Resource */,
+				A392DEB12A1C9BAE005D65DF /* Supports */,
+				A392DEB02A1C9B75005D65DF /* Extension */,
+				A392DEAF2A1C9B67005D65DF /* Utils */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		A392DEAD2A1C9B34005D65DF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A392DEAE2A1C9B3D005D65DF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A392DEAF2A1C9B67005D65DF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A392DEB02A1C9B75005D65DF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A392DEB12A1C9BAE005D65DF /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				A392DEA32A1C9ADD005D65DF /* LaunchScreen.storyboard */,
+				A392DE9A2A1C9ADC005D65DF /* SceneDelegate.swift */,
+				A392DE982A1C9ADC005D65DF /* AppDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		A392DEB22A1C9BBA005D65DF /* Literal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Literal;
+			sourceTree = "<group>";
+		};
+		A392DEB32A1C9BFC005D65DF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A392DEB42A1C9C48005D65DF /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A392DEB42A1C9C48005D65DF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A392DEB52A1C9C75005D65DF /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
