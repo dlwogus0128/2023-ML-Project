@@ -56,7 +56,7 @@ final class RecipeVC: UIViewController {
         return label
     }()
 
-    private let burgerUIIMageView = UIImageView().then {
+    private let burgerUIImageView = UIImageView().then {
         $0.image = ImageLiterals.imgBurger
     }
     
@@ -190,7 +190,7 @@ extension RecipeVC {
     }
     
     private func setLayout() {
-        view.addSubviews(backgroundGreenUIImageView, subTitleLabel, titleLabel, burgerUIIMageView, cameraButton, galaryButton, teamMolangLabel)
+        view.addSubviews(backgroundGreenUIImageView, subTitleLabel, titleLabel, burgerUIImageView, cameraButton, galaryButton, teamMolangLabel)
         
         backgroundGreenUIImageView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -208,7 +208,7 @@ extension RecipeVC {
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(38)
         }
         
-        burgerUIIMageView.snp.makeConstraints { make in
+        burgerUIImageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(180)
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(117)
             make.width.equalTo(294)
@@ -217,7 +217,7 @@ extension RecipeVC {
         
         cameraButton.snp.makeConstraints { make in
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(52)
-            make.top.equalTo(burgerUIIMageView.snp.bottom).offset(39)
+            make.top.equalTo(burgerUIImageView.snp.bottom).offset(39)
             make.height.equalTo(103)
         }
         
@@ -238,6 +238,9 @@ extension RecipeVC {
 extension RecipeVC {
     private func uploadImage(imageData: Data?) {
         guard let imageData = self.imageData else { return }
+        let loadingVC = LoadingVC()
+        loadingVC.modalPresentationStyle = .overFullScreen
+        self.present(loadingVC, animated: false)
         provider.request(.uploadImage(imageData: imageData as NSData)) {[weak self] response in
             guard let self = self else { return }
             switch response {
@@ -262,6 +265,10 @@ extension RecipeVC {
                                     print("- \(step.summury)")
                                 }
                                 print("-------------------")
+                            }
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                loadingVC.dismiss(animated: false)
                             }
                         }
                     } catch {
