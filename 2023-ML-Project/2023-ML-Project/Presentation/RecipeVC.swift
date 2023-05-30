@@ -15,17 +15,113 @@ import Moya
 
 final class RecipeVC: UIViewController {
 
+    // MARK: - Provider
+    
     private var provider = MoyaProvider<RecipeRouter>()
     
-    let photo = UIImagePickerController()
+    // MARK: - Properties
+    
+    private let photo = UIImagePickerController()
     var imageData: NSData? = nil
+    
+    
+    // MARK: - UI Components
+    
+    private let backgroundGreenUIImageView = UIImageView().then {
+        $0.image = ImageLiterals.imgMain
+    }
+    
+    private let subTitleLabel = UILabel().then {
+        $0.text = "2023S ML Project"
+        $0.font = .semiBold17
+        $0.textColor = .white
+    }
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 3
+        label.text = "내 냉장고 속 재료를 찍어\n업로드하면\n레시피를 추천해요"
+        label.font = .semiBold24
+        label.textColor = .white
+        
+        // 행간 설정
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 8 
+        
+        let attributedText = NSMutableAttributedString(string: label.text ?? "")
+        attributedText.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
+        
+        label.attributedText = attributedText
+        
+        return label
+    }()
+
+    private let burgerUIIMageView = UIImageView().then {
+        $0.image = ImageLiterals.imgBurger
+    }
+    
+    private let teamMolangLabel = UILabel().then {
+        $0.text = "Team Molang"
+        $0.font = .semiBold17
+        $0.textColor = .darkGreen
+    }
+    
+    private let cameraButton: UIButton = UIButton(type: .custom).then {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.semiBold24,
+            .foregroundColor: UIColor.darkGreen,
+        ]
+        let attributedString = NSAttributedString(string: "카메라로 찍기", attributes: attributes)
+        
+        $0.setAttributedTitle(attributedString, for: .normal)
+        $0.layer.cornerRadius = 20
+        $0.layer.borderColor = UIColor.darkGreen.cgColor
+        $0.layer.borderWidth = 1
+    }
+    
+    private let galaryButton: UIButton = UIButton(type: .custom).then {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.semiBold24,
+            .foregroundColor: UIColor.white,
+        ]
+        let attributedString = NSAttributedString(string: "갤러리에서 업로드하기", attributes: attributes)
+        
+        $0.setAttributedTitle(attributedString, for: .normal)
+        $0.layer.cornerRadius = 20
+        $0.backgroundColor = .darkGreen
+    }
+
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setUI()
+        setLayout()
+        setDelegate()
+        setAddTarget()
+    }
+}
+
+// MARK: - Methods
+
+extension RecipeVC {
+    private func setDelegate() {
+        self.photo.delegate = self
+    }
+    
+    private func setAddTarget() {
+        self.galaryButton.addTarget(self, action: #selector(galaryButtonDidTap), for: .touchUpInside)
+    }
+}
+
+// MARK: - @objc Function
+
+extension RecipeVC {
+    @objc func galaryButtonDidTap() {
         openPhoto()
         uploadImage(imageData: imageData as Data?)
-        self.photo.delegate = self
     }
 }
 
@@ -83,6 +179,57 @@ extension RecipeVC: UIImagePickerControllerDelegate, UINavigationControllerDeleg
         
         // [이미지 파커 닫기 수행]
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - Layout Helpers
+
+extension RecipeVC {
+    private func setUI() {
+        view.backgroundColor = .white
+    }
+    
+    private func setLayout() {
+        view.addSubviews(backgroundGreenUIImageView, subTitleLabel, titleLabel, burgerUIIMageView, cameraButton, galaryButton, teamMolangLabel)
+        
+        backgroundGreenUIImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(364)
+        }
+        
+        subTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(26)
+            make.leading.equalTo(view.safeAreaLayoutGuide).offset(38)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(subTitleLabel.snp.bottom).offset(13)
+            make.leading.equalTo(view.safeAreaLayoutGuide).offset(38)
+        }
+        
+        burgerUIIMageView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(180)
+            make.leading.equalTo(view.safeAreaLayoutGuide).offset(117)
+            make.width.equalTo(294)
+            make.height.equalTo(256)
+        }
+        
+        cameraButton.snp.makeConstraints { make in
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(52)
+            make.top.equalTo(burgerUIIMageView.snp.bottom).offset(39)
+            make.height.equalTo(103)
+        }
+        
+        galaryButton.snp.makeConstraints { make in
+            make.leading.trailing.height.equalTo(cameraButton)
+            make.top.equalTo(cameraButton.snp.bottom).offset(26)
+        }
+        
+        teamMolangLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
     }
 }
 

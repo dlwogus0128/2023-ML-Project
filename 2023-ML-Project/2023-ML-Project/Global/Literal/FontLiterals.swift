@@ -8,6 +8,10 @@
 import UIKit
 
 extension UIFont {
+    @nonobjc class var semiBold16: UIFont {
+        return UIFont.font(.pretendardSemiBold, ofSize: 16)
+    }
+    
     @nonobjc class var semiBold17: UIFont {
         return UIFont.font(.pretendardSemiBold, ofSize: 17)
     }
@@ -19,7 +23,6 @@ extension UIFont {
     @nonobjc class var medium16: UIFont {
         return UIFont.font(.pretendardMedium, ofSize: 16)
     }
-    
 }
 
 enum FontName: String {

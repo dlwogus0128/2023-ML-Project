@@ -11,10 +11,6 @@
 		A392DE9B2A1C9ADC005D65DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DE9A2A1C9ADC005D65DF /* SceneDelegate.swift */; };
 		A392DEA22A1C9ADD005D65DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A392DEA12A1C9ADD005D65DF /* Assets.xcassets */; };
 		A392DEA52A1C9ADD005D65DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A392DEA32A1C9ADD005D65DF /* LaunchScreen.storyboard */; };
-		A392DEBC2A1C9E43005D65DF /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A392DEB82A1C9E43005D65DF /* Pretendard-Bold.otf */; };
-		A392DEBD2A1C9E43005D65DF /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A392DEB92A1C9E43005D65DF /* Pretendard-Regular.otf */; };
-		A392DEBE2A1C9E43005D65DF /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A392DEBA2A1C9E43005D65DF /* Pretendard-SemiBold.otf */; };
-		A392DEBF2A1C9E43005D65DF /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A392DEBB2A1C9E43005D65DF /* Pretendard-Medium.otf */; };
 		A392DEC12A24A1B8005D65DF /* FontLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEC02A24A1B8005D65DF /* FontLiterals.swift */; };
 		A392DEC42A25C87C005D65DF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A392DEC32A25C87C005D65DF /* SnapKit */; };
 		A392DEC72A25C888005D65DF /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A392DEC62A25C888005D65DF /* Then */; };
@@ -25,6 +21,13 @@
 		A392DED82A25CBF1005D65DF /* RecipeResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DED72A25CBF1005D65DF /* RecipeResponseDto.swift */; };
 		A392DEDA2A25D0FE005D65DF /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DED92A25D0FE005D65DF /* BaseResponse.swift */; };
 		A392DEDC2A25D19E005D65DF /* RecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEDB2A25D19E005D65DF /* RecipeVC.swift */; };
+		A392DEDE2A262A75005D65DF /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEDD2A262A75005D65DF /* ImageLiterals.swift */; };
+		A392DEE02A262AF1005D65DF /* ColorLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEDF2A262AF1005D65DF /* ColorLiterals.swift */; };
+		A392DEE42A262D0C005D65DF /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEE32A262D0C005D65DF /* UIView+.swift */; };
+		A392DEE92A262FBB005D65DF /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A392DEE52A262FBB005D65DF /* Pretendard-Bold.otf */; };
+		A392DEEA2A262FBB005D65DF /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A392DEE62A262FBB005D65DF /* Pretendard-SemiBold.otf */; };
+		A392DEEB2A262FBB005D65DF /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A392DEE72A262FBB005D65DF /* Pretendard-Medium.otf */; };
+		A392DEEC2A262FBB005D65DF /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A392DEE82A262FBB005D65DF /* Pretendard-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,16 +37,19 @@
 		A392DEA12A1C9ADD005D65DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A392DEA42A1C9ADD005D65DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A392DEA62A1C9ADD005D65DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A392DEB82A1C9E43005D65DF /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
-		A392DEB92A1C9E43005D65DF /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
-		A392DEBA2A1C9E43005D65DF /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
-		A392DEBB2A1C9E43005D65DF /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		A392DEC02A24A1B8005D65DF /* FontLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLiterals.swift; sourceTree = "<group>"; };
 		A392DED22A25CA5E005D65DF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A392DED42A25CADA005D65DF /* RecipeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRouter.swift; sourceTree = "<group>"; };
 		A392DED72A25CBF1005D65DF /* RecipeResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponseDto.swift; sourceTree = "<group>"; };
 		A392DED92A25D0FE005D65DF /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		A392DEDB2A25D19E005D65DF /* RecipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeVC.swift; sourceTree = "<group>"; };
+		A392DEDD2A262A75005D65DF /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
+		A392DEDF2A262AF1005D65DF /* ColorLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLiterals.swift; sourceTree = "<group>"; };
+		A392DEE32A262D0C005D65DF /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		A392DEE52A262FBB005D65DF /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		A392DEE62A262FBB005D65DF /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		A392DEE72A262FBB005D65DF /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		A392DEE82A262FBB005D65DF /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 		A392DEB02A1C9B75005D65DF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A392DEE32A262D0C005D65DF /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -148,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				A392DEC02A24A1B8005D65DF /* FontLiterals.swift */,
+				A392DEDD2A262A75005D65DF /* ImageLiterals.swift */,
+				A392DEDF2A262AF1005D65DF /* ColorLiterals.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -164,10 +173,10 @@
 		A392DEB42A1C9C48005D65DF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A392DEB82A1C9E43005D65DF /* Pretendard-Bold.otf */,
-				A392DEBB2A1C9E43005D65DF /* Pretendard-Medium.otf */,
-				A392DEB92A1C9E43005D65DF /* Pretendard-Regular.otf */,
-				A392DEBA2A1C9E43005D65DF /* Pretendard-SemiBold.otf */,
+				A392DEE52A262FBB005D65DF /* Pretendard-Bold.otf */,
+				A392DEE72A262FBB005D65DF /* Pretendard-Medium.otf */,
+				A392DEE82A262FBB005D65DF /* Pretendard-Regular.otf */,
+				A392DEE62A262FBB005D65DF /* Pretendard-SemiBold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -250,11 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A392DEA52A1C9ADD005D65DF /* LaunchScreen.storyboard in Resources */,
-				A392DEBD2A1C9E43005D65DF /* Pretendard-Regular.otf in Resources */,
-				A392DEBE2A1C9E43005D65DF /* Pretendard-SemiBold.otf in Resources */,
-				A392DEBC2A1C9E43005D65DF /* Pretendard-Bold.otf in Resources */,
+				A392DEEC2A262FBB005D65DF /* Pretendard-Regular.otf in Resources */,
+				A392DEEB2A262FBB005D65DF /* Pretendard-Medium.otf in Resources */,
+				A392DEE92A262FBB005D65DF /* Pretendard-Bold.otf in Resources */,
 				A392DEA22A1C9ADD005D65DF /* Assets.xcassets in Resources */,
-				A392DEBF2A1C9E43005D65DF /* Pretendard-Medium.otf in Resources */,
+				A392DEEA2A262FBB005D65DF /* Pretendard-SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,9 +277,12 @@
 				A392DEDC2A25D19E005D65DF /* RecipeVC.swift in Sources */,
 				A392DED52A25CADA005D65DF /* RecipeRouter.swift in Sources */,
 				A392DEC12A24A1B8005D65DF /* FontLiterals.swift in Sources */,
+				A392DEE02A262AF1005D65DF /* ColorLiterals.swift in Sources */,
 				A392DE992A1C9ADC005D65DF /* AppDelegate.swift in Sources */,
+				A392DEDE2A262A75005D65DF /* ImageLiterals.swift in Sources */,
 				A392DE9B2A1C9ADC005D65DF /* SceneDelegate.swift in Sources */,
 				A392DED32A25CA5E005D65DF /* Config.swift in Sources */,
+				A392DEE42A262D0C005D65DF /* UIView+.swift in Sources */,
 				A392DED82A25CBF1005D65DF /* RecipeResponseDto.swift in Sources */,
 				A392DEDA2A25D0FE005D65DF /* BaseResponse.swift in Sources */,
 			);
