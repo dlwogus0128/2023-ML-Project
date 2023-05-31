@@ -31,6 +31,10 @@
 		A392DEEE2A2638B3005D65DF /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEED2A2638B3005D65DF /* LoadingVC.swift */; };
 		A392DEF12A263960005D65DF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A392DEF02A263960005D65DF /* Lottie */; };
 		A392DEF32A263AE0005D65DF /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = A392DEF22A263AE0005D65DF /* loading.json */; };
+		A392DEF52A263F6E005D65DF /* RecipeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEF42A263F6E005D65DF /* RecipeTableVC.swift */; };
+		A392DEF72A26442D005D65DF /* RecipeTableTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEF62A26442D005D65DF /* RecipeTableTVC.swift */; };
+		A392DEF92A273025005D65DF /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEF82A273025005D65DF /* RecipeDetailVC.swift */; };
+		A392DEFB2A278812005D65DF /* SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392DEFA2A278812005D65DF /* SetImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		A392DEE82A262FBB005D65DF /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		A392DEED2A2638B3005D65DF /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		A392DEF22A263AE0005D65DF /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		A392DEF42A263F6E005D65DF /* RecipeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableVC.swift; sourceTree = "<group>"; };
+		A392DEF62A26442D005D65DF /* RecipeTableTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableTVC.swift; sourceTree = "<group>"; };
+		A392DEF82A273025005D65DF /* RecipeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
+		A392DEFA2A278812005D65DF /* SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,9 @@
 			children = (
 				A392DEDB2A25D19E005D65DF /* RecipeVC.swift */,
 				A392DEED2A2638B3005D65DF /* LoadingVC.swift */,
+				A392DEF42A263F6E005D65DF /* RecipeTableVC.swift */,
+				A392DEF62A26442D005D65DF /* RecipeTableTVC.swift */,
+				A392DEF82A273025005D65DF /* RecipeDetailVC.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				A392DED92A25D0FE005D65DF /* BaseResponse.swift */,
+				A392DEFA2A278812005D65DF /* SetImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -288,12 +300,16 @@
 				A392DEDC2A25D19E005D65DF /* RecipeVC.swift in Sources */,
 				A392DED52A25CADA005D65DF /* RecipeRouter.swift in Sources */,
 				A392DEC12A24A1B8005D65DF /* FontLiterals.swift in Sources */,
+				A392DEF92A273025005D65DF /* RecipeDetailVC.swift in Sources */,
 				A392DEE02A262AF1005D65DF /* ColorLiterals.swift in Sources */,
 				A392DE992A1C9ADC005D65DF /* AppDelegate.swift in Sources */,
 				A392DEEE2A2638B3005D65DF /* LoadingVC.swift in Sources */,
+				A392DEF72A26442D005D65DF /* RecipeTableTVC.swift in Sources */,
+				A392DEFB2A278812005D65DF /* SetImage.swift in Sources */,
 				A392DEDE2A262A75005D65DF /* ImageLiterals.swift in Sources */,
 				A392DE9B2A1C9ADC005D65DF /* SceneDelegate.swift in Sources */,
 				A392DED32A25CA5E005D65DF /* Config.swift in Sources */,
+				A392DEF52A263F6E005D65DF /* RecipeTableVC.swift in Sources */,
 				A392DEE42A262D0C005D65DF /* UIView+.swift in Sources */,
 				A392DED82A25CBF1005D65DF /* RecipeResponseDto.swift in Sources */,
 				A392DEDA2A25D0FE005D65DF /* BaseResponse.swift in Sources */,

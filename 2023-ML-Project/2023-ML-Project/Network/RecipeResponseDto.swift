@@ -8,6 +8,10 @@
 import Foundation
 
 struct RecipeResponseDto: Codable {
+    let recipes: [RecipeList]
+}
+
+struct RecipeList: Codable {
     let name: String
     let thumb: String
     let ingredients: [String: String]

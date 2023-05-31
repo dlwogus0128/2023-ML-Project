@@ -254,7 +254,7 @@ extension RecipeVC {
                         decoder.dateDecodingStrategy = .iso8601
 
                         do {
-                            let recipes = try decoder.decode([RecipeResponseDto].self, from: responseData)
+                            let recipes = try decoder.decode([RecipeList].self, from: responseData)
 
                             for recipe in recipes {
                                 print("Name: \(recipe.name)")
@@ -267,8 +267,12 @@ extension RecipeVC {
                                 print("-------------------")
                             }
                             
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
                                 loadingVC.dismiss(animated: false)
+                                let recipeTableVC = RecipeTableVC()
+                                recipeTableVC.modalPresentationStyle = .overFullScreen
+                                recipeTableVC.recipes = recipes // recipes 데이터를 recipeTableVC에 전달
+                                self.present(recipeTableVC, animated: false)
                             }
                         }
                     } catch {
